@@ -1,0 +1,102 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define N 10
+
+void entrada_dados(int x[]);
+void imprimir_vetor(int x[]);
+	
+int vet_01[N],
+    vet_02[N],
+	vet_03[N],
+	vet_04[N],
+	vet_05[N];
+	
+int par[5];
+
+	  
+
+int main(){
+	
+	int i;
+	int maior;
+
+	printf("\n O primeiro vetor\n ");
+	entrada_dados(vet_01);
+	imprimir_vetor(vet_01);
+	for(i=0;i<N;i++){
+		if(vet_01[i]%2==0){
+		par[0] = par[0] + vet_01[i];
+		}
+	}
+	printf("\n\nPares do primeiro vetor: %d \n", par[0]);
+
+		
+	printf("\nO do segundo vetor\n ");
+	entrada_dados(vet_02);
+	imprimir_vetor(vet_02);
+	for(i=0;i<N;i++){
+		if(vet_02[i]%2==0){
+		par[1] = par[1] + vet_02[i];
+		}
+	}
+	printf("\n\nPares do segundo vetor: %d \n", par[1]);
+
+	
+	printf("\nO terceiro vetor\n ");
+	entrada_dados(vet_03);
+	imprimir_vetor(vet_03);
+		for(i=0;i<N;i++){
+		if(vet_03[i]%2==0){
+		par[2] = par[2] + vet_03[i];
+		}
+	}
+	printf("\n\nPares do terceiro vetor: %d \n", par[2]);
+
+			
+	printf("\nO quarto vetor\n ");
+	entrada_dados(vet_04);
+	imprimir_vetor(vet_04);
+		for(i=0;i<N;i++){
+		if(vet_04[i]%2==0){
+		par[3] = par[3] + vet_04[i];
+		}
+	}
+	printf("\n\nPares do quarto vetor: %d \n", par[3]);
+
+		
+	printf("\nO quinto vetor\n ");
+	entrada_dados(vet_05);
+	imprimir_vetor(vet_05);
+	for(i=0;i<N;i++){
+		if(vet_05[i]%2==0){
+		par[4] = par[4] + vet_05[i];
+		}
+	}
+	printf("\n\nPares do quinto vetor: %d \n", par[4]);
+
+	for(i=0;i<5;i++){
+		if(par[i]>maior){
+			maior= par[i];
+		}
+	}
+	
+	printf("\n O maior elemento dentre os numeros pares e: %d", maior);
+
+	
+	return 0;
+}
+	
+	void entrada_dados(int x[]) {
+	int i;
+		for(i=0;i<N;i++){
+			x[i]=rand()%100;
+		}
+	}
+	
+
+	void imprimir_vetor(int x[]) {
+		int i;
+		for(i=0;i<N;i++){
+			printf("\nPosicao[%i]= %0.2d ", i,x[i]);
+		}
+	}
